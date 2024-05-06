@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        formGrey: '#F6F6F6',
+      },
+    },
   },
   plugins: [require('daisyui')],
 };
