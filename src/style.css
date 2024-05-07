@@ -20,3 +20,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.book-form-scrollable {
+  max-height: 60vh;
+  scrollbar-color: #6f6f6f54 transparent;
+  scrollbar-width: thin;
+  border-radius: 10px;
+}
