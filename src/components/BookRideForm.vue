@@ -1,6 +1,6 @@
 <template>
-  <form>
-    <div class="book-form-scrollable overflow-y-auto">
+  <form class="relative">
+    <div class="p-4 book-form-scrollable overflow-y-auto">
       <div class="dropdown w-full">
         <div
           tabindex="0"
@@ -136,6 +136,8 @@
         />
       </div>
 
+      <Slider />
+
       <h2 class="text-black text-xl font-medium my-3">Summary</h2>
 
       <div class="flex flex-col space-y-2">
@@ -153,10 +155,24 @@
         </p>
       </div>
     </div>
+    <div class="mt-6 p-4 form-submit-button">
+      <p class="flex text-black text-sm font-medium">
+        Payment Method
+        <span class="inline-block ml-auto font-bold">Balance . SAR20,450.00</span>
+      </p>
+      <button
+        class="mt-2 py-2 rounded-md text-white font-bold bg-black w-full disabled:bg-formGrey disabled:text-gray-200"
+        disabled
+      >
+        Submit
+      </button>
+    </div>
   </form>
 </template>
 
 <script setup>
+import Slider from './Slider.vue';
+
 const rideOptions = [
   'Airport Pickup',
   'Airport Drop-off',

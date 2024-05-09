@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         formGrey: '#F6F6F6',
+        formDarkGrey: '#B9B9B9',
       },
     },
   },

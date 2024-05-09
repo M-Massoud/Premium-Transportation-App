@@ -22,8 +22,12 @@ body {
 }
 
 .book-form-scrollable {
-  max-height: 60vh;
+  max-height: 52vh;
   scrollbar-color: #6f6f6f54 transparent;
   scrollbar-width: thin;
   border-radius: 10px;
+}
+
+.form-submit-button {
+  box-shadow: 0 -4px 10px 0 #00000006;
 }
