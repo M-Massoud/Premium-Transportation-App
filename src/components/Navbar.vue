@@ -39,12 +39,12 @@
             tabindex="0"
             class="dropdown-content mt-10 -mr-6 z-[1] menu p-3 shadow bg-white rounded-lg w-60"
           >
-            <RouterLink class="text-black flex py-3">
+            <RouterLink class="text-black flex py-3" to="">
               <img src="../assets/icons/setting.svg" class="mr-3" />
               <li class="font-medium">Profile Settings</li>
             </RouterLink>
             <hr />
-            <RouterLink class="text-black flex py-3">
+            <RouterLink class="text-black flex py-3" to="">
               <img src="../assets/icons/translate.svg" class="mr-3" />
               <li class="font-medium">العربية</li>
             </RouterLink>
