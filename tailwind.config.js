@@ -10,6 +10,9 @@ export default {
       zIndex: {
         100: '100',
       },
+      boxShadow: {
+        primary: '0 0 20 4 #bfbfbf25',
+      },
     },
   },
   plugins: [require('daisyui')],

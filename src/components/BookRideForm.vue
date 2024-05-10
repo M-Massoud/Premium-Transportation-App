@@ -136,6 +136,8 @@
         />
       </div>
 
+      <DateInput />
+
       <Slider />
 
       <h2 class="text-black text-xl font-medium my-3">Summary</h2>
@@ -172,6 +174,7 @@
 
 <script setup>
 import Slider from './Slider.vue';
+import DateInput from './DateInput.vue';
 
 const rideOptions = [
   'Airport Pickup',
