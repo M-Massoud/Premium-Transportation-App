@@ -7,6 +7,9 @@ export default {
         formGrey: '#F6F6F6',
         formDarkGrey: '#B9B9B9',
       },
+      zIndex: {
+        100: '100',
+      },
     },
   },
   plugins: [require('daisyui')],
