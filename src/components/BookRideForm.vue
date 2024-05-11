@@ -92,10 +92,14 @@
             >Flight number</label
           >
           <input
+            v-model="flightNumber"
             placeholder="Enter flight number"
             class="bg-transparent placeholder:font-light placeholder:text-sm placeholder:text-gray-500 text-black font-medium text-sm focus:outline-none"
           />
         </div>
+        <p v-if="flightNumberError.isError" class="text-sm text-nowrap text-red-600">
+          {{ flightNumberError.message }}
+        </p>
 
         <Slider />
 
@@ -216,6 +220,7 @@
       <button
         class="mt-2 py-2 rounded-md text-white font-bold bg-black w-full disabled:bg-formGrey disabled:text-gray-200"
         :onclick="e => showPaymentsModal(e)"
+        :disabled="!rideType || !fromLocation || !toLocation"
       >
         Submit
       </button>
@@ -226,15 +231,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import Dropdown from './Dropdown.vue';
 import Slider from './Slider.vue';
 import DateInput from './DateInput.vue';
 import PaymentMethodsModal from './PaymentMethodModal.vue';
+import * as yup from 'yup';
+import { validationSchema } from '../utils/bookrideValidationSchema.js';
 
 const rideType = ref('');
 const fromLocation = ref('');
 const toLocation = ref('');
+const flightNumber = ref('');
+const flightNumberError = ref({
+  isError: false,
+  message: '',
+});
+
 const checkboxesValues = ref({
   forAnother: false,
   nameBoard: false,
@@ -298,19 +311,18 @@ const handleSelectOption = (option, input) => {
 };
 
 const showPaymentsModal = e => {
-  console.log(e.preventDefault());
+  e.preventDefault();
   paymentsModal.showModal();
 };
 
+watch(flightNumber, async (newValue, oldValue) => {
+  try {
+    await validationSchema.validate({ flightNumber: newValue });
+    flightNumberError.value = { isError: false, message: '' };
+  } catch (error) {
+    flightNumberError.value = { isError: true, message: error.message };
+  }
+});
+
 const handleSubmit = e => {};
 </script>
-
-<style>
-.modal-shadow {
-  box-shadow: 0 7 100 0 #00000025;
-}
-
-.modal-overlay {
-  background-color: #fcfcfc70;
-}
-</style>
