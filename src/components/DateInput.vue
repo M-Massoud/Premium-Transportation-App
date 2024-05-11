@@ -6,7 +6,7 @@
       <div>
         <label class="text-xs font-medium text-black">Date</label>
         <input
-          class="bg-transparent placeholder:font-light placeholder:text-sm placeholder:text-gray-500 block p-0 -my-1 text-black font-medium max-w-24"
+          class="bg-transparent placeholder:font-light placeholder:text-sm placeholder:text-gray-500 block p-0 -my-1 text-black text-sm font-medium max-w-24"
           placeholder="Pickup Date"
           type="text"
           disabled
@@ -33,7 +33,7 @@
       <div>
         <label class="text-xs font-medium text-black">Time</label>
         <input
-          class="bg-transparent placeholder:font-light placeholder:text-sm placeholder:text-gray-500 block p-0 -my-1 text-black font-medium max-w-24"
+          class="bg-transparent placeholder:font-light placeholder:text-sm placeholder:text-gray-500 block p-0 -my-1 text-black text-sm font-medium max-w-24"
           placeholder="Pickup Time"
           type="text"
           :value="dayjs(date).format('hh:mm A')"
@@ -118,7 +118,7 @@ const date = ref(new Date());
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
-  background-image: url(assets/icons/arrow-left-calendar.svg);
+  background-image: url(/src/assets/icons/arrow-left-calendar.svg);
   background-color: #f1f1f1;
   background-position: center;
   display: block;

@@ -13,7 +13,7 @@ export const navbarRoutes = [
 ];
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
+  { path: '/', redirect: 'book-ride', name: 'Home', component: Home },
   ...navbarRoutes,
   { path: '/:pathMatch(.*)', name: 'not-found', component: NotFound },
 ];

@@ -1,9 +1,39 @@
 <template>
   <nav class="flex bg-black mx-auto container">
-    <div class="py-4">
-      <img src="../assets/images/cabrio-logo.png" alt="cabrio-logo" />
+    <div class="py-4 max-lg:flex max-lg:space-x-4 max-lg:p-4">
+      <div class="drawer lg:hidden z-[120]">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <!-- Page content here -->
+          <label for="my-drawer" class="">
+            <img class="fill-white" src="../assets/icons/menu.svg" alt="menu-icon" />
+          </label>
+        </div>
+        <div class="drawer-side drawr">
+          <label
+            for="my-drawer"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+          ></label>
+          <ul
+            class="flex items-center menu p-4 w-72 min-h-full bg-base-200 text-base-content"
+          >
+            <RouterLink
+              before
+              class="text-white font-normal my-1"
+              v-for="route in navbarRoutes"
+              :to="route.path"
+              :key="route.name"
+            >
+              {{ route.name }}
+            </RouterLink>
+          </ul>
+        </div>
+      </div>
+
+      <img color="white" src="../assets/images/cabrio-logo.png" alt="cabrio-logo" />
     </div>
-    <div class="flex space-x-10 ml-24 py-4">
+    <div class="hidden lg:flex space-x-10 ml-24 py-4">
       <RouterLink
         before
         class="text-white font-normal"
@@ -17,7 +47,7 @@
     </div>
     <!-- user details -->
     <div
-      class="text-white ml-auto flex space-x-5 divide-x divide-white divide-opacity-30"
+      class="hidden text-white ml-auto lg:flex space-x-5 divide-x divide-white divide-opacity-30"
     >
       <div class="text-right py-4">
         <h4 class="text-xs font-normal">Balance</h4>
