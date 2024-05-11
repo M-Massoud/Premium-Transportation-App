@@ -16,7 +16,7 @@
           disabled
         />
       </p>
-      <img :src="`/src/assets/icons/${props.icon}.svg`" alt="icon" />
+      <img :src="`/icons/${props.icon}.svg`" alt="icon" />
     </div>
 
     <ul

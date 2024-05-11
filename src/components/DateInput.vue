@@ -23,7 +23,7 @@
       >
         <template #default="{ togglePopover }">
           <button @click.prevent="togglePopover">
-            <img src="../assets/icons/calendar.svg" />
+            <img src="/icons/calendar.svg" />
           </button>
         </template>
       </VDatePicker>
@@ -49,7 +49,7 @@
       >
         <template #default="{ togglePopover }">
           <button @click.prevent="togglePopover">
-            <img src="../assets/icons/clock.svg" />
+            <img src="/icons/clock.svg" />
           </button>
         </template>
       </VDatePicker>
@@ -118,7 +118,7 @@ const date = ref(new Date());
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
-  background-image: url(/src/assets/icons/arrow-left-calendar.svg);
+  background-image: url(/icons/arrow-left-calendar.svg);
   background-color: #f1f1f1;
   background-position: center;
   display: block;

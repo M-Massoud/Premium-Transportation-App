@@ -116,11 +116,7 @@
             <label class="flex items-center text-sm text-black" for="name-board"
               >Name-Board
               <div class="lg:tooltip" data-tip="More info about name board">
-                <img
-                  class="ml-2"
-                  src="../assets/icons/info-circle.svg"
-                  alt="info-icon"
-                />
+                <img class="ml-2" src="/icons/info-circle.svg" alt="info-icon" />
               </div>
             </label>
           </p>
@@ -168,11 +164,7 @@
               for="additional-luggages"
               >Additional car for luggages
               <div class="lg:tooltip" data-tip="This will cost more money">
-                <img
-                  class="ml-2"
-                  src="../assets/icons/info-circle.svg"
-                  alt="info-icon"
-                />
+                <img class="ml-2" src="/icons/info-circle.svg" alt="info-icon" />
               </div>
             </label>
           </p>
