@@ -4,10 +4,10 @@
 
     <div class="flex items-center space-x-4">
       <button @click.prevent="prevSlide" class="">
-        <img src="../assets/icons/arrow-right.svg" alt="arrow-icon" />
+        <img src="/icons/arrow-right.svg" alt="arrow-icon" />
       </button>
       <button @click.prevent="nextSlide" class="">
-        <img src="../assets/icons/arrow-left.svg" alt="arrow-icon" />
+        <img src="/icons/arrow-left.svg" alt="arrow-icon" />
       </button>
     </div>
   </div>
@@ -30,11 +30,7 @@
       >
         <div class="absolute top-2 right-2 z-100">
           <div class="tooltip tooltip-left" data-tip="More info">
-            <img
-              class="ml-2"
-              src="../assets/icons/info-circle.svg"
-              alt="info-icon"
-            />
+            <img class="ml-2" src="/icons/info-circle.svg" alt="info-icon" />
           </div>
         </div>
         <img :src="slide.imgUrl" :alt="slide.alt" class="w-full text-center" />
@@ -42,11 +38,11 @@
         <p class="text-sm font-light">{{ slide.car }}</p>
         <div class="my-2 flex space-x-4">
           <div class="flex space-x-2">
-            <img src="../assets/icons/users.svg" alt="users-icon" />
+            <img src="/icons/users.svg" alt="users-icon" />
             <span class="text-sm">{{ slide.passengers }}</span>
           </div>
           <div class="flex space-x-2">
-            <img src="../assets/icons/bag.svg" alt="users-icon" />
+            <img src="/icons/bag.svg" alt="users-icon" />
             <span class="text-sm">{{ slide.bags }}</span>
           </div>
         </div>
@@ -63,7 +59,7 @@ const currentIndex = ref(0);
 
 const slides = [
   {
-    imgUrl: '/src/assets/images/car-1.png',
+    imgUrl: '/images/car-1.png',
     alt: 'car image',
     class: 'Pure class',
     car: 'Lucid Air Dream',
@@ -72,7 +68,7 @@ const slides = [
     price: '850.50',
   },
   {
-    imgUrl: '/src/assets/images/car-2.png',
+    imgUrl: '/images/car-2.png',
     alt: 'car image',
     class: 'Business Class',
     car: 'Mercedes E450 Class',
@@ -81,7 +77,7 @@ const slides = [
     price: '240.00',
   },
   {
-    imgUrl: '/src/assets/images/car-3.png',
+    imgUrl: '/images/car-3.png',
     alt: 'car image',
     class: 'Mid size luxury',
     car: 'BMW x6',
@@ -90,7 +86,7 @@ const slides = [
     price: '1200.00',
   },
   {
-    imgUrl: '/src/assets/images/car-4.png',
+    imgUrl: '/images/car-4.png',
     alt: 'car image',
     class: 'Sports Class',
     car: 'Land Rover',

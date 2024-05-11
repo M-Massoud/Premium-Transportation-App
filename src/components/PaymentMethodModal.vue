@@ -3,7 +3,7 @@
     <div class="modal-box bg-white w-96">
       <form method="dialog">
         <button class="">
-          <img src="../assets/icons/close.svg" />
+          <img src="/icons/close.svg" />
         </button>
       </form>
       <h4 class="font-semibold text-3xl text-black mt-2">Payment Method</h4>
@@ -16,10 +16,7 @@
           class="py-4 flex border-b border-gray-100"
         >
           <div class="w-8 flex items-center">
-            <img
-              :src="`/src/assets/icons/${method.icon}.svg`"
-              alt="payment method image"
-            />
+            <img :src="`/icons/${method.icon}.svg`" alt="payment method image" />
           </div>
           <span
             class="text-black ml-6 text-right"
@@ -29,13 +26,13 @@
           <img
             v-if="method.selected"
             class="ml-auto"
-            src="../assets/icons/tick-circle.svg"
+            src="/icons/tick-circle.svg"
             alt="checkmark icon"
           />
         </li>
 
         <button class="flex pt-4 space-x-7 pb-1">
-          <img src="../assets/icons/add.svg" alt="add method icon" />
+          <img src="/icons/add.svg" alt="add method icon" />
           <span class="text-black font-medium"> Add payment method </span>
         </button>
       </ul>

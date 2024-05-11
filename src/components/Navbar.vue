@@ -6,10 +6,10 @@
         <div class="drawer-content">
           <!-- Page content here -->
           <label for="my-drawer" class="">
-            <img class="fill-white" src="../assets/icons/menu.svg" alt="menu-icon" />
+            <img class="fill-white" src="/icons/menu.svg" alt="menu-icon" />
           </label>
         </div>
-        <div class="drawer-side drawr">
+        <div class="drawer-side drawer">
           <label
             for="my-drawer"
             aria-label="close sidebar"
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <img color="white" src="../assets/images/cabrio-logo.png" alt="cabrio-logo" />
+      <img color="white" src="/images/cabrio-logo.png" alt="cabrio-logo" />
     </div>
     <div class="hidden lg:flex space-x-10 ml-24 py-4">
       <RouterLink
@@ -55,7 +55,7 @@
       </div>
       <div class="text-right pl-5 py-4 flex items-center">
         <div class="flex space-x-3">
-          <img src="../assets/images/Khuzimah.png" alt="cabrio-logo" />
+          <img src="/images/Khuzimah.png" alt="cabrio-logo" />
           <div>
             <h4 class="text-base">Khuzimah A.</h4>
             <p class="text-xs text-left font-light">Cabrio Co.</p>
@@ -63,19 +63,19 @@
         </div>
         <div class="dropdown dropdown-end ml-24">
           <div tabindex="0" role="button" class="">
-            <img src="../assets/icons/arrow-down.svg" />
+            <img src="/icons/arrow-down.svg" />
           </div>
           <ul
             tabindex="0"
             class="dropdown-content mt-10 -mr-6 z-[1] menu p-3 shadow bg-white rounded-lg w-60"
           >
             <RouterLink class="text-black flex py-3" to="">
-              <img src="../assets/icons/setting.svg" class="mr-3" />
+              <img src="/icons/setting.svg" class="mr-3" />
               <li class="font-medium">Profile Settings</li>
             </RouterLink>
             <hr />
             <RouterLink class="text-black flex py-3" to="">
-              <img src="../assets/icons/translate.svg" class="mr-3" />
+              <img src="/icons/translate.svg" class="mr-3" />
               <li class="font-medium">العربية</li>
             </RouterLink>
             <button
